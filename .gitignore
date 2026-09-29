@@ -2,7 +2,9 @@ secret/*
 !secret/example/
 logs/*
 out/*
+outputs/
 __pycache__
-TODO.md
+CHECKLIST.md
+START_HERE.md
 venv/
 uv.lock

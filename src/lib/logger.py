@@ -5,7 +5,7 @@ import os
 os.makedirs("out", exist_ok=True)
 
 logging.basicConfig(
-    level=logging.DEBUG,  # Set the base logging level
+    level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
         RotatingFileHandler("out/app.log", maxBytes=1024 * 1024 * 5, backupCount=5),  # 5 MB per file, 5 backups

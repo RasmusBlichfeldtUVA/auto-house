@@ -1,12 +1,7 @@
-.PHONY: me-have-a-house example
+.PHONY: check tracker
 
-me-have-a-house:
-	python main.py
+check:
+	venv/bin/python -m pytest -q
 
-example:
-	[ -d secret/example ] && rm -r secret/example || true && \
-	cp -r secret/michal secret/example && \
-	rm secret/example/data/wgzimmer.ch/* && \
-	rm secret/example/data/flatfox.ch/* && \
-	rm secret/example/data/wohnen.ethz.ch/* && \
-	find secret/example -type f -name "*.json" -exec sed -i 's/: "[^"]*"/: ""/g' {} +
+tracker:
+	venv/bin/python tracker_export.py
